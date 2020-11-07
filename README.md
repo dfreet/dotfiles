@@ -5,4 +5,6 @@ Various configuration files and scripts for convenience
 * Xresources: terminal settings
 * config: application config files
 * terminal: terminal configuration
+* wallpapers: wallpapers of various resolutions
+* scripts: various scripts for appeareance and convenience
 
