@@ -1,0 +1,25 @@
+alias ls="ls --color=auto"
+alias ll="ls -lh"
+alias la="ls -Alh"
+alias cl="clear; pwd; ls -Alh"
+alias alm="alsamixer"
+alias translate="~/scripts/translate/translate.py"
+alias process="~/scripts/processScan.sh"
+
+pacgit () {
+	git clone "https://aur.archlinux.org/$1.git" ~/downloads/aur/$1
+}
+
+defscan () {
+	scanimage -d hpaio:/usb/DeskJet_2130_series?serial=CN6BE4C1SG068Y --format=png --output-file $1 --mode Color
+}
+
+timer () {
+	termdown $@
+	play $HOME/audio/sounds/alarm.wav
+}
+
+# Common Typos
+alias sl="ls --color=auto"
+alias ivm="vim"
+

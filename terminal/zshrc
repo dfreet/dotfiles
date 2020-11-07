@@ -1,0 +1,36 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory autocd extendedglob notify prompt_subst
+unsetopt beep nomatch
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/devyn/.zshrc'
+
+autoload -Uz compinit promptinit vcs_info colors
+compinit
+promptinit
+
+source /home/devyn/scripts/zsh-git-prompt/zshrc.sh
+
+function lastExit() {
+	local LAST_EXIT_CODE=$?
+	if [[ $LAST_EXIT_CODE -ne 0 ]]; then
+		#local EXIT_CODE_PROMPT="%{\e[38;5;249m%}($LAST_EXIT_CODE) %{\e[0m%}"
+		#local EXIT_CODE_PROMPT="%F{249}($LAST_EXIT_CODE) "
+		local EXIT_CODE_PROMPT="($LAST_EXIT_CODE) "
+		echo "$EXIT_CODE_PROMPT"
+	fi
+}
+
+RPROMPT='$(git_super_status)'
+
+#PROMPT="%{\e[38;5;249m%}{ %{\e[0m%}%F{213}%n%F{248}@%F{199}%M%{\e[38;5;249m%} } %{\e[0m%}%D{%A, %B %d - %H:%M}"$'\n''$(lastExit)'"%~%F{white} > "
+PROMPT="%F{249}{ %F{213}%n%F{248}@%F{199}%M%F{249} } %D{%A, %B %d - %H:%M}"$'\n''$(lastExit)'"%~%F{white} > "
+#PS1=$'\e[38;5;249m{\e[0m \e[38;5;213m%n\e[0m\e[38;5;249m@\e[0m\e[38;5;199m%M\e[0m \e[38;5;249m} %D{%A, %B %d - %H:%M}\n$(lastExit)%~\e[0m \e[38;5;15m>\e[0m '
+
+source $HOME/.aliases
+source $HOME/.profile
+

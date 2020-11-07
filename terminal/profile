@@ -1,0 +1,10 @@
+export LC_TIME="en_DK.utf-8"
+export GPG_TTY=$($tty)
+export VISUAL=vim
+export EDITOR=$VISUAL
+export SCRIPTS="$HOME/scripts"
+export GRIM_DEFAULT_DIR="$HOME/pictures/screenshots"
+export _JAVA_AWT_WM_NONREPARENTING=1
+#export GTK_THEME=FlatColor
+export QT_PKG_CONFIG=true
+export PATH=/home/devyn/go/bin:/home/devyn/.local/bin:$PATH
