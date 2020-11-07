@@ -1,0 +1,58 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[music]
+command=exec $BLOCKS/getMusic.py $button
+markup=pango
+interval=-1
+signal=1
+
+[update]
+command=exec $BLOCKS/getSyu.sh
+interval=60
+
+[volume]
+command=exec $BLOCKS/getVolume.py $button
+markup=pango
+interval=-1
+signal=2
+
+[battery]
+command=exec $BLOCKS/getBattery/getBattery.py
+markup=pango
+interval=1
+
+[internet]
+command=exec $BLOCKS/getWifi.sh
+markup=pango
+interval=10
+
+[vpn]
+command=exec $BLOCKS/getVPN.sh
+markup=pango
+interval=10
+
+[memory]
+command=exec $BLOCKS/getMem.py
+markup=pango
+interval=5
+
+[cpu]
+command=exec $BLOCKS/getCPU.py
+markup=pango
+interval=5
+
+[time]
+command=exec $BLOCKS/getDateTime.py
+markup=pango
+interval=1
+

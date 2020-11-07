@@ -179,11 +179,11 @@ for_window [class="Spotify"] move to workspace $ws9
 for_window [class="Thunderbird"] move to workspace $ws10
 
 # run on xorg startup
-exec --no-startup-id /home/devyn/scripts/dotfiles/setWallpaper.sh
+exec --no-startup-id $SCRIPTS/dotfiles/setWallpaper.sh
 exec --no-startup-id picom
 exec --no-startup-id lxqt-policykit-agent
-exec --no-startup-id /home/devyn/scripts/i3blocks/sendSignal.py 2> /dev/null
-exec --no-startup-id pactl subscribe | grep --line-buffered "sink" | xargs -L1 /home/devyn/scripts/i3blocks/sendSignal.sh
+exec --no-startup-id $BLOCKS/sendSignal.py 2> /dev/null
+exec --no-startup-id pactl subscribe | grep --line-buffered "sink" | xargs -L1 $BLOCKS/sendSignal.sh
 exec --no-startup-id redshift-gtk -l 40.52:-78.40
 
 bindsym $mod+Shift+f exec firefox-developer-edition

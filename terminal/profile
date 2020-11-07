@@ -3,6 +3,7 @@ export GPG_TTY=$(tty)
 export VISUAL=vim
 export EDITOR=$VISUAL
 export SCRIPTS="$HOME/scripts"
+export BLOCKS="$SCRIPTS/dotfiles/i3blocks"
 export GRIM_DEFAULT_DIR="$HOME/pictures/screenshots"
 export _JAVA_AWT_WM_NONREPARENTING=1
 #export GTK_THEME=FlatColor
