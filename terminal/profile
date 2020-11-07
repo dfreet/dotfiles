@@ -1,5 +1,5 @@
 export LC_TIME="en_DK.utf-8"
-export GPG_TTY=$($tty)
+export GPG_TTY=$(tty)
 export VISUAL=vim
 export EDITOR=$VISUAL
 export SCRIPTS="$HOME/scripts"

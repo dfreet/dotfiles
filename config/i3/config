@@ -168,7 +168,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-#  user defined settings
+# user defined settings
 for_window [class=".*"] border pixel 1
 gaps inner 5
 smart_gaps on
