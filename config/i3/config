@@ -203,8 +203,8 @@ bindsym $mod+p exec playerctl play-pause
 bindsym $mod+minus exec playerctl previous
 bindsym $mod+equal exec playerctl next
 
-bindsym $mod+Shift+m exec $HOME/scripts/runOne/music.sh
-bindsym $mod+m exec $HOME/scripts/runOne/mail.sh
+bindsym $mod+Shift+m exec $HOME/scripts/dotfiles/runOne/music.sh
+bindsym $mod+m exec $HOME/scripts/dotfiles/runOne/mail.sh
 
 bindsym $mod+Shift+w exec rofi -show window
 bindsym $mod+c exec rofi -show ssh
