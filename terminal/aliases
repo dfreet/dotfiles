@@ -1,10 +1,11 @@
 alias ls="ls --color=auto"
 alias ll="ls -lh"
 alias la="ls -Alh"
-alias cl="clear; pwd; ls -Alh"
+alias cl="clear; pwd; ls -lh"
 alias alm="alsamixer"
 alias translate="~/scripts/translate/translate.py"
 alias process="~/scripts/processScan.sh"
+alias view="vim -R"
 
 pacgit () {
 	git clone "https://aur.archlinux.org/$1.git" ~/downloads/aur/$1
