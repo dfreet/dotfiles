@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/devyn/documents/textbooks'
+let g:netrw_dirhist_7='/home/devyn/documents/secure_1_'
+let g:netrw_dirhist_6='/home/devyn/.config/rofi'
+let g:netrw_dirhist_5='/usr/share/X11/xkb/symbols'
+let g:netrw_dirhist_4='/home/devyn/documents/archlive/airootfs/root'
+let g:netrw_dirhist_3='/home/devyn/.config'
+let g:netrw_dirhist_2='/home/devyn/dotfiles/config/i3'
+let g:netrw_dirhist_1='/home/devyn/dotfiles/.git'
+let g:netrw_dirhist_0='/home/devyn/.config'
+let g:netrw_dirhist_9='/etc/X11/xorg.conf.d'
