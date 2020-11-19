@@ -169,7 +169,7 @@ smart_gaps on
 smart_borders on
 
 #	Move spotify and thunderbird to specific workspaces
-for_window [class="Spotify"] move to workspace $ws9
+#for_window [class="Spotify"] move to workspace $ws9
 for_window [class="Thunderbird"] move to workspace $ws10
 
 #	Set wallpaper
@@ -205,8 +205,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 #	change bedroom brightness
-bindsym $mod+XF86MonBrightnessUp exec /home/devyn/scripts/lights.py bri inc 30
-bindsym $mod+XF86MonBrightnessDown exec /home/devyn/scripts/lights.py bri dec 30
+bindsym $mod+XF86MonBrightnessUp exec /home/devyn/scripts/dotfiles/lights.py bri inc 30
+bindsym $mod+XF86MonBrightnessDown exec /home/devyn/scripts/dotfiles/lights.py bri dec 30
 
 #	control music playback
 bindsym $mod+p exec playerctl play-pause
@@ -225,8 +225,8 @@ bindsym Print exec scrot -ub -q 100 -e 'mv $f /home/devyn/pictures/screenshots/'
 bindsym $mod+Print exec scrot -q 100 -e 'mv $f /home/devyn/pictures/screenshots/'
 
 #	toggle or change bedroom lights
-bindsym $mod+t exec /home/devyn/scripts/lights.py toggle
-bindsym $mod+w exec /home/devyn/scripts/lights.py focus
+bindsym $mod+t exec /home/devyn/scripts/dotfiles/lights.py toggle
+bindsym $mod+w exec /home/devyn/scripts/dotfiles/lights.py focus
 
 #	open firefox in first workspace
 assign [class="firefoxdeveloperedition"] $ws1

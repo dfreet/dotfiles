@@ -13,7 +13,7 @@ try:
 
     def convertBytes(memory):
             # byte unit conversions (^1=KB, ^2=MB, ^3=GB)
-            byteConv = 1024
+            byteConv = 1000
             unit = "B"
             
             if memory >= byteConv ** 3:

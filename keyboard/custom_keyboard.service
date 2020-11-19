@@ -1,0 +1,13 @@
+[Unit]
+Description=Update US keyboard layout to customized version
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/us_custom.sh
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
