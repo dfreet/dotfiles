@@ -13,7 +13,7 @@ autoload -Uz compinit promptinit vcs_info colors
 compinit
 promptinit
 
-source /home/devyn/scripts/dotfiles/zsh-git-prompt/zshrc.sh
+source $HOME/scripts/dotfiles/zsh-git-prompt/zshrc.sh
 
 function lastExit() {
 	local LAST_EXIT_CODE=$?
