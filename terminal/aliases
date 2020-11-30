@@ -8,7 +8,7 @@ alias process="~/scripts/processScan.sh"
 alias view="vim -R"
 
 pacgit () {
-	git clone "https://aur.archlinux.org/$1.git" ~/downloads/aur/$1
+	git clone "https://aur.archlinux.org/$1.git" ~/aur/$1
 }
 
 defscan () {

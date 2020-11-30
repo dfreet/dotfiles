@@ -5,7 +5,7 @@ network=$( echo "$conns" | grep -P '^.*\s(wifi|ethernet)(?!\s*--\s*$).*$')
 
 if [ -z "$network" ]
 then
-	echo "<span foreground='red'> --</span>"
+	echo "<span foreground='grey'> --</span>"
 else
 	nameCol=$(( $( echo "$conns" | grep -oP 'NAME\s*' | wc -c ) - 1 ))
 	uuidCol=$(( $( echo "$conns" | grep -oP 'UUID\s*' | wc -c ) - 1 ))

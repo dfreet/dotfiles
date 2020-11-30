@@ -191,7 +191,7 @@ exec --no-startup-id pactl subscribe | grep --line-buffered "sink" | xargs -L1 $
 exec --no-startup-id redshift-gtk -l 40.52:-78.40
 
 #	keybind for firefox
-bindsym $mod+Shift+f exec firefox-developer-edition
+bindsym $mod+Shift+f exec firefox
 
 #	keybind for python terminal
 bindsym $mod+Shift+p exec urxvt -e python
@@ -232,7 +232,8 @@ bindsym $mod+w exec /home/devyn/scripts/dotfiles/lights.py focus
 assign [class="firefoxdeveloperedition"] $ws1
 
 #	lock screen
-bindsym $mod+i exec i3lock -eB=0 --nofork --insidevercolor=b967ffaa --insidewrongcolor=$frontaa --ringvercolor=b967ffaa --ringwrongcolor=$frontaa --ringcolor=fffb96aa --keyhlcolor=$frontaa --bshlcolor=01cdfeaa
+bindsym $mod+i exec i3lock --nofork -c 151515
+#bindsym $mod+i exec i3lock -eB=0 --nofork --insidevercolor=b967ffaa --insidewrongcolor=$frontaa --ringvercolor=b967ffaa --ringwrongcolor=$frontaa --ringcolor=fffb96aa --keyhlcolor=$frontaa --bshlcolor=01cdfeaa
 
 #	dont warp mouse when moving between monitors
 mouse_warping none

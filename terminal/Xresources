@@ -1,4 +1,4 @@
-URxvt.font:       xft:Cozette:size=8:Regular,xft:Symbola:size=8:Regular,xft:Font Awesome 5 Brands:size=8:Regular,xft:Font Awesome 5 Free:size=8:Solid,xft:Font Awesome 5 Free:size=8:Regular
+URxvt.font:			xft:Cozette:size=8:Regular,xft:Noto Color Emoji:size=8:Regular
 URxvt.scrollBar:	false
 URxvt.depth:		32
 URxvt.background:	[75]#151515

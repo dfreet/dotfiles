@@ -36,11 +36,6 @@ command=exec $BLOCKS/getWifi.sh
 markup=pango
 interval=10
 
-[vpn]
-command=exec $BLOCKS/getVPN.sh
-markup=pango
-interval=10
-
 [memory]
 command=exec $BLOCKS/getMem.py
 markup=pango
