@@ -24,3 +24,8 @@ timer () {
 alias sl="ls --color=auto"
 alias ivm="vim"
 
+# Start a window manager
+alias starti3="cp .xinitrc_i3 .xinitrc; startx"
+alias startobx="cp .xinitrc_obx .xinitrc; startx"
+alias startplasma="cp .xinitrc_kde .xinitrc; startx"
+

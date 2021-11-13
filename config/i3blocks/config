@@ -21,7 +21,7 @@ command=exec $BLOCKS/getSyu.sh
 interval=60
 
 [volume]
-command=exec $BLOCKS/getVolume.py $button
+command=exec $BLOCKS/getVolume.sh $button
 markup=pango
 interval=-1
 signal=2

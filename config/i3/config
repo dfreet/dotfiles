@@ -174,21 +174,18 @@ for_window [class="Thunderbird"] move to workspace $ws10
 
 #	Set wallpaper
 exec --no-startup-id $SCRIPTS/dotfiles/setWallpaper.sh
-
 #	Start compositor
 exec --no-startup-id picom
-
 #	Start policykit agent
 exec --no-startup-id lxqt-policykit-agent
-
 #	Start i3blocks music updater
 exec --no-startup-id $BLOCKS/sendSignal.py 2> /dev/null
-
 #	Start i3blocks volume updater
 exec --no-startup-id pactl subscribe | grep --line-buffered "sink" | xargs -L1 $BLOCKS/sendSignal.sh
-
 #	Start redshift
-exec --no-startup-id redshift-gtk -l 40.52:-78.40
+exec --no-startup-id redshift-gtk -l 40.52:-78.38
+#	Start nextcloud
+exec --no-startup-id nextcloud
 
 #	keybind for firefox
 bindsym $mod+Shift+f exec firefox
@@ -227,6 +224,8 @@ bindsym $mod+Print exec scrot -q 100 -e 'mv $f /home/devyn/pictures/screenshots/
 #	toggle or change bedroom lights
 bindsym $mod+t exec /home/devyn/scripts/dotfiles/lights.py toggle
 bindsym $mod+w exec /home/devyn/scripts/dotfiles/lights.py focus
+
+bindsym $mod+Shift+backslash exec xdotool click --repeat 1000 --delay 10 1
 
 #	open firefox in first workspace
 assign [class="firefoxdeveloperedition"] $ws1

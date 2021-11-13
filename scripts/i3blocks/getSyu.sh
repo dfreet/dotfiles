@@ -9,8 +9,8 @@ hours=$(( $diff / 3600 ))
 minutes=$(( ( $diff - $hours * 3600 ) / 60 ))
 seconds=$(( $diff - ( $hours * 3600 + $minutes * 60 ) ))
 
-if [ $hours -gt 12 ]
+if [ $hours -gt 24 ]
 then
-	echo " have you -Syu'd today?"
+	echo " Last update $hours hours ago"
 fi
 
