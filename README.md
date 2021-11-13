@@ -7,5 +7,4 @@ Various configuration files and scripts for convenience
 * terminal: terminal configuration
 * wallpapers: wallpapers of various resolutions
 * scripts: various scripts for appeareance and convenience
-abc
 
