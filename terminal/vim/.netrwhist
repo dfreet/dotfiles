@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/etc/X11/xorg.conf.d'
+let g:netrw_dirhist_8='/home/arch/devyn/.config/openbox'
 let g:netrw_dirhist_7='/home/share/devyn/programming/cpp/w3schools/0_tutorial/03_variables/0_declare'
 let g:netrw_dirhist_6='/home/share/devyn'
 let g:netrw_dirhist_5='/home/share/devyn/dotfiles'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_3='/home/share/devyn/programming/webview'
 let g:netrw_dirhist_2='/home/share/devyn/dotfiles/scripts'
 let g:netrw_dirhist_1='/var/log/private'
 let g:netrw_dirhist_0='/home/arch/devyn/programming'
-let g:netrw_dirhist_9='/home/share/devyn/games/terraria/game'
-let g:netrw_dirhist_8='/home/devyn/documents/textbooks'

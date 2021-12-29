@@ -14,7 +14,7 @@ font pango:Inconsolata 10
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 #	Start nm-applet to manage network connection
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 #	Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
