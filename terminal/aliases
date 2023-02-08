@@ -6,6 +6,9 @@ alias alm="alsamixer"
 alias translate="~/scripts/translate/translate.py"
 alias process="~/scripts/processScan.sh"
 alias view="vim -R"
+alias headphones="bluetoothctl power on && bluetoothctl connect 54:B7:E5:86:53:01"
+alias exti="exit"
+alias music="exec ncmpcpp"
 
 pacgit () {
 	git clone "https://aur.archlinux.org/$1.git" ~/downloads/aur/$1
@@ -28,4 +31,7 @@ alias ivm="vim"
 alias starti3="cp .xinitrc_i3 .xinitrc; startx"
 alias startobx="cp .xinitrc_obx .xinitrc; startx"
 alias startplasma="cp .xinitrc_kde .xinitrc; startx"
+alias startsway="sway --unsupported-gpu"
+alias home="~/.screenlayout/dpDual.sh && ~/scripts/dotfiles/setWallpaper.sh"
+alias away="~/.screenlayout/single.sh && ~/scripts/dotfiles/setWallpaper.sh"
 

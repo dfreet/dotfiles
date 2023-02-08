@@ -2,5 +2,5 @@
 
 res=$( xdpyinfo | awk '/dimensions/{print $2}' )
 wallpaper="$HOME/pictures/wallpapers/wallpaper_$res.png"
-feh --bg-scale $wallpaper
+feh --bg-scale --no-xinerama $wallpaper
 

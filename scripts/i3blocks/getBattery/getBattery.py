@@ -25,7 +25,10 @@ try:
     # Use psutil to get charge level & whether battery is currently charging
     battery = psutil.sensors_battery()
     if battery is not None:
-        batPercent = int(battery.percent)
+        if battery.percent > 99.9:
+            batPercent = 100
+        else:
+            batPercent = int(battery.percent)
         batPlugged = battery.power_plugged
 
         # When to give low battery notification (-1 for never)

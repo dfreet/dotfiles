@@ -1,19 +1,42 @@
 #!/usr/bin/env bash
 
-wlan=$(iwctl station wlan0 show)
-state=$(echo "$wlan" | grep -oP '(?<=State\s{15})\S*')
+#TODO: Set up ethernet detection
+state=$( iwctl station wlan0 show )
+reState="State\s+(\S+)"
+reNetwork="Connected network\s+(\S+)"
+reEth="(\S.+\S)\s+[0-9a-z-]{36}\s+ethernet"
+reNmWifi="(\S.+\S)\s+[0-9a-z-]{36}\s+wifi"
+wifiSym=""
+ethSym=""
 
-if [[ "$state" == "connected" ]]
+if [[ $state =~ $reState ]]
 then
-	network=$(echo "$wlan" | grep -oP '(?<=Connected network\s{3})\S*')
-
-	ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
-
-	echo " $network: $ping"
-elif [[ "$state" == "disconnected" ]]
-then
-	echo "<span foreground='grey'> --</span>"
+	if [[ ${BASH_REMATCH[1]} == "connected" ]]
+	then
+		if [[ $state =~ $reNetwork ]] 
+		then
+			network=${BASH_REMATCH[1]}
+			ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+			echo "<span foreground='white'>$wifiSym $network: $ping</span>"
+		fi
+	else
+		echo "<span foreground='grey'>$wifiSym --</span>"
+	fi
 else
-	echo "<span foreground='red'> XX</span>"
+	nmcli=$( nmcli c show -a | tail -n +2 )
+	if [[ $nmcli =~ $reEth ]]
+	then
+		network=${BASH_REMATCH[1]}
+		ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+		echo "<span foreground='white'>$ethSym $network : $ping</span>"
+	elif [[ $nmcli =~ $reNmWifi ]]
+	then
+		network=${BASH_REMATCH[1]}
+		ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+		echo "<span foreground='white'>$wifiSym $network: $ping</span>"
+	else
+		echo $nmcli
+		echo "<span foreground='red'>network broke</span>"
+	fi
 fi
 
