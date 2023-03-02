@@ -206,9 +206,9 @@ bindsym $mod+XF86MonBrightnessUp exec /home/devyn/scripts/dotfiles/lights.py bri
 bindsym $mod+XF86MonBrightnessDown exec /home/devyn/scripts/dotfiles/lights.py bri dec 30
 
 #	control music playback
-bindsym $mod+p exec playerctl play-pause
-bindsym $mod+minus exec playerctl previous
-bindsym $mod+equal exec playerctl next
+bindsym $mod+p exec mpc toggle
+bindsym $mod+minus exec mpc next
+bindsym $mod+equal exec mpc prev
 
 #	run spotify or thunderbird/move to workspace
 bindsym $mod+Shift+m exec $HOME/scripts/dotfiles/runOne/music.sh
@@ -242,7 +242,7 @@ mouse_warping none
 # class                 border  background text    indicator child_border
 client.focused          #ffffff #ffffff    #ffffff #01cdfe   $front
 client.focused_inactive #cccccc #cccccc    #cccccc #009dce   #cf419e
-client.unfocused        #888888 #888888    #888888 #005d8e   $back
+client.unfocused        #888888 #888888    #888888 #005d8e   #222226
 client.urgent           #ffffff #ffffff    #ffffff #01cdfe   $text
 client.placeholder      #000000 #0c0c0c    #ffffff #000000   #0c0c0c
 
@@ -250,17 +250,18 @@ client.background #ffffff
 
 #	Start i3bar to display a workspace bar (plus the system information i3status finds out, if available)
 bar {
-	i3bar_command i3bar --transparency
+	#i3bar_command i3bar --transparency
+	i3bar_command i3bar
 	status_command i3blocks
 	#font pango:Font Awesome 6 Brands Regular, Font Awesome 6 Free Regular style=Regular
 	colors {
-		background $backbb
+		background #222226dd
 		statusline $textff
 		separator  #fffb96ff
 		
 		focused_workspace  $frontbb  $frontbb  $textff
 		active_workspace   #cf419ebb #cf419ebb $textff
-		inactive_workspace $backbb   $backbb   $text1ff
+		inactive_workspace #222226dd #222226dd $text1ff
 		urgent_workspace   $textbb   $textbb   $frontff
 		binding_mode       $textbb   $textbb   $frontff
 	}

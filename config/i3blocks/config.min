@@ -1,0 +1,23 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[volume]
+command=exec $BLOCKS/getVolume.sh $button
+markup=pango
+interval=-1
+signal=2
+
+[battery]
+command=exec $BLOCKS/getBattery/getBattery.py
+markup=pango
+interval=1
+

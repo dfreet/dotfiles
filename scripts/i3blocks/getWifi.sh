@@ -16,27 +16,24 @@ then
 		if [[ $state =~ $reNetwork ]] 
 		then
 			network=${BASH_REMATCH[1]}
-			ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+			ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
 			echo "<span foreground='white'>$wifiSym $network: $ping</span>"
+			exit 1
 		fi
-	else
-		echo "<span foreground='grey'>$wifiSym --</span>"
 	fi
+fi
+nmcli=$( nmcli c show -a | tail -n +2 )
+if [[ $nmcli =~ $reEth ]]
+then
+	network=${BASH_REMATCH[1]}
+	ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+	echo "<span foreground='white'>$ethSym $network : $ping</span>"
+elif [[ $nmcli =~ $reNmWifi ]]
+then
+	network=${BASH_REMATCH[1]}
+	ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+	echo "<span foreground='white'>$wifiSym $network: $ping</span>"
 else
-	nmcli=$( nmcli c show -a | tail -n +2 )
-	if [[ $nmcli =~ $reEth ]]
-	then
-		network=${BASH_REMATCH[1]}
-		ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
-		echo "<span foreground='white'>$ethSym $network : $ping</span>"
-	elif [[ $nmcli =~ $reNmWifi ]]
-	then
-		network=${BASH_REMATCH[1]}
-		ping=$( ping -c 3 www.devynfreet.com | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
-		echo "<span foreground='white'>$wifiSym $network: $ping</span>"
-	else
-		echo $nmcli
-		echo "<span foreground='red'>network broke</span>"
-	fi
+	echo "<span foreground='grey'>$wifiSym --</span>"
 fi
 

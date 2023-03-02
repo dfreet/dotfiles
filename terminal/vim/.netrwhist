@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/devyn/.config/i3blocks'
+let g:netrw_dirhist_5='/home/devyn/.config'
 let g:netrw_dirhist_4='/home/devyn/documents/context_example'
 let g:netrw_dirhist_3='/home/devyn/dotfiles/scripts/i3blocks'
 let g:netrw_dirhist_2='/home/devyn/.config/i3blocks'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_0='/home/devyn/.config/i3blocks'
 let g:netrw_dirhist_9='/etc/X11/xorg.conf.d'
 let g:netrw_dirhist_8='/home/arch/devyn/.config/openbox'
 let g:netrw_dirhist_7='/home/share/devyn/programming/cpp/w3schools/0_tutorial/03_variables/0_declare'
-let g:netrw_dirhist_6='/home/share/devyn'
-let g:netrw_dirhist_5='/home/share/devyn/dotfiles'

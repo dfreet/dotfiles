@@ -11,9 +11,9 @@ separator=true
 separator_block_width=15
 
 [music]
-command=exec $BLOCKS/getMusic.py $button
+command=exec $BLOCKS/getMusic.sh $button
 markup=pango
-interval=-1
+interval=1
 signal=1
 
 [update]

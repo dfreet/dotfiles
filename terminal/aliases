@@ -8,7 +8,7 @@ alias process="~/scripts/processScan.sh"
 alias view="vim -R"
 alias headphones="bluetoothctl power on && bluetoothctl connect 54:B7:E5:86:53:01"
 alias exti="exit"
-alias music="exec ncmpcpp"
+alias music="mpd && exec ncmpcpp"
 
 pacgit () {
 	git clone "https://aur.archlinux.org/$1.git" ~/downloads/aur/$1
