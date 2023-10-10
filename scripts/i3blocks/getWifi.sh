@@ -16,8 +16,8 @@ then
 		if [[ $state =~ $reNetwork ]] 
 		then
 			network=${BASH_REMATCH[1]}
-			ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
-			echo "<span foreground='white'>$wifiSym $network: $ping</span>"
+			#ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+			echo "<span foreground='white'>$wifiSym $network</span>"
 			exit 1
 		fi
 	fi
@@ -26,13 +26,13 @@ nmcli=$( nmcli c show -a | tail -n +2 )
 if [[ $nmcli =~ $reEth ]]
 then
 	network=${BASH_REMATCH[1]}
-	ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
-	echo "<span foreground='white'>$ethSym $network : $ping</span>"
+	#ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+	echo "<span foreground='white'>$ethSym $network</span>"
 elif [[ $nmcli =~ $reNmWifi ]]
 then
 	network=${BASH_REMATCH[1]}
-	ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
-	echo "<span foreground='white'>$wifiSym $network: $ping</span>"
+	#ping=$( ping -c 3 archlinux.org | grep -oP '(?<=\/)\d+\.?\d*(?=\/)' | head -1 | grep -oP '^\d+' )
+	echo "<span foreground='white'>$wifiSym $network</span>"
 else
 	echo "<span foreground='grey'>$wifiSym --</span>"
 fi

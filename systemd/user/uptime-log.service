@@ -1,0 +1,13 @@
+[Unit]
+Description=Log uptime before shutdown
+DefaultDependencies=no
+Before=shutdown.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /home/devyn/dotfiles/scripts/log-uptime.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=shutdown.target
+

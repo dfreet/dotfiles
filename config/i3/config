@@ -8,7 +8,7 @@
 set $mod Mod4
 
 #	Set font to inconsolata size 10
-font pango:Inconsolata 10
+font pango:Inconsolata 11
 
 #	Lock screen before suspend
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -74,6 +74,8 @@ bindsym $mod+f fullscreen toggle
 
 #	toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+e layout tabbed
 
 #	change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle

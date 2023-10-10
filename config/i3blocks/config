@@ -10,6 +10,7 @@
 separator=true
 separator_block_width=15
 
+
 [music]
 command=exec $BLOCKS/getMusic.sh $button
 markup=pango

@@ -5,6 +5,11 @@ grey="#999999"
 green="#00ff66"
 status=$( mpc 2>&1 )
 
+if [ "$1" = "1" ];
+then
+	mpc toggle
+fi
+
 if [ $? -eq 0 ];
 then
 	songText=$( mpc current )
