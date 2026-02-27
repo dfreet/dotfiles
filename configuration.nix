@@ -73,6 +73,7 @@
     networkmanagerapplet # utility for networkmanager
     #gnupg1 # for git commit signing
     git # version control
+    prismlauncher # minecraft
     #pinentry-gtk2 # passphrase entry for gtk
   ];
 
