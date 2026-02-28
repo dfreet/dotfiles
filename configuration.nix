@@ -14,8 +14,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  # Use kernel 6.18 for nvidia compatibility
+  boot.kernelPackages = pkgs.linuxPackages_6_18;
 
   boot.initrd.luks.devices."luks-1879f864-5f03-4328-8703-775529b24e6d".device = "/dev/disk/by-uuid/1879f864-5f03-4328-8703-775529b24e6d";
   networking.hostName = "nix_legion"; # Define your hostname.
