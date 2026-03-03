@@ -76,6 +76,7 @@
     unzip # decompress files
     (python313.withPackages (python313Packages: with python313Packages; [
       dbus-python
+      pyopenssl
     ]))
   ];
 
