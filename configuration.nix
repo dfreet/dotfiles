@@ -74,6 +74,7 @@
     git # version control
     prismlauncher # minecraft
     unzip # decompress files
+    openssl # socket layer (for eduroam)
     (python313.withPackages (python313Packages: with python313Packages; [
       dbus-python
       pyopenssl
