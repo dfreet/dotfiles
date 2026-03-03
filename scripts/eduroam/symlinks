@@ -1,0 +1,3 @@
+ln -s /run/current-system/sw/bin/openssl /bin/openssl
+ln -s /run/current-system/sw/bin/uname /bin/uname
+ln -s /run/current-system/sw/bin/xdg-open /bin/xdb-open
