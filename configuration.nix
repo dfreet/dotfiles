@@ -75,6 +75,7 @@
     git # version control
     prismlauncher # minecraft
     #pinentry-gtk2 # passphrase entry for gtk
+    python315 # latest python version
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
