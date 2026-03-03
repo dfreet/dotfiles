@@ -71,11 +71,12 @@
     neovim # cli text editor
     firefox # web browser
     networkmanagerapplet # utility for networkmanager
-    #gnupg1 # for git commit signing
     git # version control
     prismlauncher # minecraft
-    #pinentry-gtk2 # passphrase entry for gtk
-    python315 # latest python version
+    #python315 # latest python version
+    (python313.withPackages (python313Packages: with python313Packages; [
+      dbus-python
+    ]))
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
