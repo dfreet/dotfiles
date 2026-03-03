@@ -73,7 +73,7 @@
     networkmanagerapplet # utility for networkmanager
     git # version control
     prismlauncher # minecraft
-    #python315 # latest python version
+    unzip # decompress files
     (python313.withPackages (python313Packages: with python313Packages; [
       dbus-python
     ]))
