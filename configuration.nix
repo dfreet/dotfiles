@@ -93,6 +93,7 @@
   # List services that you want to enable:
   services.xserver = {
     enable = true;
+    dpi = 100;
 
     displayManager.lightdm.enable = true;
 
