@@ -93,7 +93,7 @@
   # List services that you want to enable:
   services.xserver = {
     enable = true;
-    dpi = lib.mkForce 100;
+    dpi = pkgs.lib.mkForce 100;
 
     displayManager.lightdm.enable = true;
 
