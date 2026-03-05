@@ -80,6 +80,7 @@
       dbus-python
       pyopenssl
     ]))
+    pwvucontrol # set volume with pipewire
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
