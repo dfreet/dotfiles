@@ -75,7 +75,8 @@
     prismlauncher # minecraft
     unzip # decompress files
     openssl # socket layer (for eduroam)
-    (python313.withPackages (python313Packages: with python313Packages; [
+    xev # monitor events
+    (python313.withPackages (python313Packages: with python313Packages; [ # (for eduroam)
       dbus-python
       pyopenssl
     ]))
@@ -107,6 +108,7 @@
         dmenu # application launcher
         i3status # default i3 status bar
         i3blocks # alternative status bar (installing both for now)
+	i3-volume # volume control
       ];
     };
   };
