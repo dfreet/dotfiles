@@ -3,7 +3,6 @@
 let
   myAliases = {
     ll = "ls -ahl";
-    .. = "cd ..";
   };
 in
 {
@@ -82,7 +81,7 @@ in
 
   programs.zsh = {
     enable = true;
-    shellAliases = myAliases
+    shellAliases = myAliases;
   };
 }
 
