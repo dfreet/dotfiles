@@ -81,6 +81,7 @@
       pyopenssl
     ]))
     pwvucontrol # set volume with pipewire
+    neofetch # display system information
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
