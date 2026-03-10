@@ -1,6 +1,9 @@
 # dotfiles
 Desktop configuration files
 
+rebuild: #nixos-rebuild switch --flake
+update: nix flake update
+
 TODO:
 - aliases
   - vim for neovim
