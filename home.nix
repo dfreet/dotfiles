@@ -73,4 +73,18 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  let
+    myAliases = {
+      ll = "ls -ahl";
+      .. = "cd ..";
+    };
+  in
+  {
+    programs.zsh = {
+      enable = true;
+      shellAliases = myAliases
+    };
+  }
 }
+
