@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  myAliases = {
+    ll = "ls -ahl";
+    .. = "cd ..";
+  };
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -74,17 +80,9 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  let
-    myAliases = {
-      ll = "ls -ahl";
-      .. = "cd ..";
-    };
-  in
-  {
-    programs.zsh = {
-      enable = true;
-      shellAliases = myAliases
-    };
-  }
+  programs.zsh = {
+    enable = true;
+    shellAliases = myAliases
+  };
 }
 
