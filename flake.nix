@@ -4,11 +4,11 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.11";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    home-manager.url = "github:nix-community/home-manager/release-25.11";
+    home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nixos-hardware }:
+  outputs = { self, nixpkgs, nixos-hardware, home-manager }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -16,7 +16,7 @@
     in {
       nixosConfigurations = {
         nixlegion = lib.nixosSystem {
-          inherit system
+          inherit system;
 	  modules = [ 
 	    ./configuration.nix
 	    nixos-hardware.nixosModules.lenovo-legion-16iax10h
@@ -25,7 +25,7 @@
       };
       homeConfigurations = {
         devyn = home-manager.lib.homeManagerConfiguration {
-	  inherit pkgs
+	  inherit pkgs;
 	  modules = [ ./home.nix ];
 	};
       };
