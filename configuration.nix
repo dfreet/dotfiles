@@ -127,6 +127,7 @@
     };
     defaultSession = "none+i3";
   };
+  services.blueman.enable = true;
 
   programs.i3lock.enable = true; # default i3 screen lock
 
