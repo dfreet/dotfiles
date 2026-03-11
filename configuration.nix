@@ -82,6 +82,7 @@
     ]))
     pwvucontrol # set volume with pipewire
     neofetch # display system information
+    arandr # monitor configuration gui
   ];
 
   environment.shells = with pkgs; [ zsh ] ;
